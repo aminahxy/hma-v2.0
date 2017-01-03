@@ -170,6 +170,8 @@ public class MapRed_RPC_ComputingStatus_AvailabilityProbingJob_MonitorItemWorker
 			job.setMapperClass(org.apache.hadoop.mapreduce.Mapper.class);
 			job.setReducerClass(org.apache.hadoop.mapreduce.Reducer.class);
 			job.setPriority(JobPriority.VERY_HIGH);
+
+
 			job.setNumReduceTasks(1);
 			org.apache.hadoop.mapreduce.lib.input.FileInputFormat.addInputPath(job, new Path("/monitor/test"));
 			org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.setOutputPath(job, new Path("/monitor/out." + jobTimestampID));
