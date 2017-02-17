@@ -165,7 +165,6 @@ public class MapRed_RPC_ComputingStatus_AvailabilityProbingJob_MonitorItemWorker
 			job.setOutputFormatClass(org.apache.hadoop.mapreduce.lib.output.TextOutputFormat.class);
 			job.setOutputKeyClass(Text.class);
 			job.setOutputValueClass(Text.class);
-			//job.setUser("boyan5");
 
 			job.setMapperClass(org.apache.hadoop.mapreduce.Mapper.class);
 			job.setReducerClass(org.apache.hadoop.mapreduce.Reducer.class);
